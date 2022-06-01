@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<title>TABUADA</title>
+
+</head>
+
+<body>
+	<h1>TABUADA</h1>
+		
+		<button onclick="mostrarTabuada()">Criar Tabuada</button>
+		<button onclick="limparTabuada()">Limpar Tabuada</button>
+
+		<div id="output"></div>
+
+	<script type="text/javascript">
+			function mostrarTabuada(){
+//perguntar numero pro usuário e converter de string pra numero
+			var n = parseFloat (prompt("Digite um número"));
+
+			limparTabuada();
+
+//criar uma variável que servirá de indice
+			var i = 0;
+//em quanto indice for <= 1000 concatena na variável 'mensagem'
+			while (i<=10){
+				mensagem+= n + ' x ' + i + ' = ' + (n*i) + '<br>';
+				i++; // soma mais 1 até chegar no 1000
+			}
+//mostra mensagem no output
+				output.innerHTML = mensagem;
+		}
+
+		function limparTabuada(){
+			mensagem = '';
+			output.innerHTML = mensagem;
+		}
+
+		var output = document.querySelector('#output');
+
+		var mensagem = '';
+
+
+
+		
+		
+	</script>
+
+</body>
+</html>
